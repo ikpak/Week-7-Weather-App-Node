@@ -18,11 +18,12 @@ router.get('/', async function(req, res, next) {
     // use the location coords to get the forecast
     // get coords from location.geometry.coordinates
     const forecast = await getForecast(location.geometry.coordinates)
-    console.log(forecast.current.weather)
+    console.log(forecast)
     return res.render('index', { 
       title: 'Weather App',
       city: location.text,
-      forecast: forecast.current 
+      country: location.context,
+      forecast: forecast.current
     })
 
   } catch(err) {

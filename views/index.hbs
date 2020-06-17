@@ -7,8 +7,8 @@
 
 {{#if forecast}}
     <ul>
-        <li>City: {{city}}</li>
-        <li>Temperature: {{ forecast.temp }}°C</li>
-        <li>Description: {{ forecast.weather.0.description }}</li>
+        <li>{{ city }}, {{ country.0.text }}</li>
+        <li>{{ forecast.temp }}°C</li>
+        <li>{{ forecast.weather.0.description }}</li>
     </ul>
 {{/if}}
